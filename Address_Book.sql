@@ -79,3 +79,22 @@ SELECT
 FROM
     Address_Book
 GROUP BY STATE;
+#UC8
+INSERT INTO Address_Book (First_Name, Last_Name, Address, CITY, STATE, ZIP, Phone_No, Email)VALUES
+    ( 'Roy','Bett', 'Medermia_Glanz', 'Cochin', 'Kerala', 454321, 9453878701,'niddhi@in.com');
+SELECT 
+    *
+FROM
+    Address_Book
+WHERE
+    CITY = 'Cochin'
+ORDER BY First_Name;
+UPDATE Address_Book 
+SET 
+    Email = 'roy@ni.co'
+WHERE
+    First_Name = 'Roy';
+SELECT 
+    *
+FROM
+    Address_Book;
