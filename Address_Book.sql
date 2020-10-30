@@ -61,3 +61,10 @@ SELECT
     *
 FROM
     Address_Book;
+#UC6
+SELECT 
+    *
+FROM
+    Address_Book
+WHERE
+    CITY = 'Cochin' OR STATE = 'Kerala';
