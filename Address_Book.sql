@@ -68,3 +68,14 @@ FROM
     Address_Book
 WHERE
     CITY = 'Cochin' OR STATE = 'Kerala';
+    #UC7
+SELECT 
+    CITY, STATE, COUNT(*)
+FROM
+    Address_Book
+GROUP BY CITY , STATE;
+SELECT 
+    STATE, COUNT(*)
+FROM
+    Address_Book
+GROUP BY STATE;
