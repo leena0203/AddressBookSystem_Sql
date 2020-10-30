@@ -53,3 +53,11 @@ SELECT
     *
 FROM
     Address_Book;
+#UC5
+DELETE FROM Address_Book 
+WHERE
+    First_Name = 'Samuel';
+SELECT 
+    *
+FROM
+    Address_Book;
