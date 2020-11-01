@@ -123,3 +123,9 @@ alter table Contact add ContactId int not null auto_increment primary key first;
  select * from Address_Book;
  #UC10
  select type,count(ContactId) from Address_Book group by Type;
+ #UC11
+  insert into Address_Book
+     (ContactId, AddressBookName, Type) VALUES
+     ( 3, 'Book1', 'Family'),
+     ( 3, 'Book2', 'Friend'),
+     ( 4, 'Book3', 'Profession');
