@@ -121,4 +121,5 @@ alter table Contact add ContactId int not null auto_increment primary key first;
     ( 2, 'Book4', 'Profession'),
     ( 4, 'Book1', 'Profession');
  select * from Address_Book;
- 
+ #UC10
+ select type,count(ContactId) from Address_Book group by Type;
