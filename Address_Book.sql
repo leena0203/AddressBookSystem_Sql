@@ -129,3 +129,6 @@ alter table Contact add ContactId int not null auto_increment primary key first;
      ( 3, 'Book1', 'Family'),
      ( 3, 'Book2', 'Friend'),
      ( 4, 'Book3', 'Profession');
+#UC13
+select Contact.ContactId, Contact.First_Name, Contact.Last_Name, Contact.Phone_No, Contact.Email, Contact.ZIP, Contact.CITY, Contact.STATE, Contact.Address, Address_Book.BookId, Address_Book.AddressBookName, Address_Book.Type
+     from Contact inner join Address_Book on Contact.ContactId = Address_Book.ContactId;
