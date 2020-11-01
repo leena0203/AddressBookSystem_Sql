@@ -98,3 +98,27 @@ SELECT
     *
 FROM
     Address_Book;
+#UC9
+alter table Address_Book rename to Contact;
+
+alter table Contact drop primary key;
+
+alter table Contact add ContactId int not null auto_increment primary key first;
+
+ create table Address_Book
+     (
+     BookId  int not null auto_increment,
+     ContactId int,
+     AddressBookName  varchar(200) not null,
+     Type  varchar(200) not null,
+     primary key    (BookId),
+     foreign key (ContactId) references Contact(ContactId)
+     );
+  insert into Address_Book
+    (ContactId, AddressBookName, Type) VALUES
+    ( 3, 'Book1', 'Family'),
+    ( 1, 'Book3', 'Friend'),
+    ( 2, 'Book4', 'Profession'),
+    ( 4, 'Book1', 'Profession');
+ select * from Address_Book;
+ 
